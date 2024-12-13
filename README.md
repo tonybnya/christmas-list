@@ -7,4 +7,4 @@ npm install
 npm run dev
 ```
 
-or go to the deployed version at `https://tonybnya-christmas-list.netlify.app/`
+or go to the deployed version at `https://christmas-list.onrender.com/`
