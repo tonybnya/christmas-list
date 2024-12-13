@@ -17,13 +17,11 @@ const processEntry = (entry) => {
 
 // Function to check item is not duplicate
 function checkDuplicate() {
-    /* ⚠️ You need to add code to this function! ⚠️*/
-
     let itemText = itemInput.value;
 
     // If Grandpa enters no item
     if (!itemText) {
-        alert("Grandpa, please enter a gift");
+        alert("Please enter a valid gift");
         return;
     }
 
@@ -36,7 +34,7 @@ function checkDuplicate() {
     // Check if the shadow list with all lowercases versions
     // already contains the entry value
     if (lowercaseList.includes(lower)) {
-        alert("Grandpa, this gift already exists in your list!");
+        alert("This gift already exists in the list!");
     } else {
         listArr.push(gift);
         lowercaseList.push(lower);
@@ -65,7 +63,7 @@ function renderList() {
 // Function to edit an item in the shopping list
 window.editItem = function(oldGift) {
     // Prompt Grandpa to edit the gift
-    const newGift = prompt("Grandpa, edit the gift:", oldGift);
+    const newGift = prompt("Please, edit the gift:", oldGift);
 
     if (newGift === null) {
         return;
@@ -75,7 +73,7 @@ window.editItem = function(oldGift) {
     const processedGift = processEntry(newGift);
 
     if (!processedGift) {
-        alert("Grandpa, please enter a valid gift name.");
+        alert("Please enter a valid gift name.");
         return;
     }
 
@@ -87,7 +85,7 @@ window.editItem = function(oldGift) {
         lowercaseList.includes(lowerNewGift) &&
         oldGift.toLowerCase() !== lowerNewGift
     ) {
-        alert("Grandpa, this gift already exists in your list!");
+        alert("This gift already exists in the list!");
         return;
     }
 
